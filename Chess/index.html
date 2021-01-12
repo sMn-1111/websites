@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+     <meta charset="utf-8">
+     <title>Chess</title>
+
+
+     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+     <link rel="stylesheet" href="style.css">
+     <script src="clock.js"></script> 
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="jquery.scrollTo.min.js"></script>
+
+     
+     <script>
+        jQuery(function($)
+       {
+           //zresetuj scrolla
+           $.scrollTo(0);
+
+           $('#link1').click(function(){ $.scrollTo($('#rules'), 1000); });
+           $('#link2').click(function(){ $.scrollTo($('#best_players'), 1000); });
+           $('#link3').click(function(){ $.scrollTo($('#openings'), 1000); });
+           $('#link4').click(function(){ $.scrollTo($('#history'), 1000); });     
+           
+           $('.scrollup').click(function(){ $.scrollTo($('body'), 1000); });
+       }
+       )
+
+       //pokaż podczas przewijania
+       $(window).scroll(function()
+       {
+           if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+           else $('.scrollup').fadeOut();
+       }
+
+
+       );
+
+    </script>
+
+
+  </head>
+  <body onload="time();">
+
+    <nav id="rectangle">
+        <div id="link1" class="menu">
+            <a  href="#">Rules</a>
+        </div>
+        <div id="link2" class="menu">
+            <a  href="#">Best players</a>
+        </div>
+        <div id="link3" class="menu">  
+            <a  href="#">Openings</a>
+        </div>
+        <div id="link4" class="menu">
+            <a  href="#">History</a>
+        </div>
+        <div class="clock" id="clock">
+        
+        </div>
+    </nav>
+
+    <main>
+        <a href="#" class="scrollup"></a>
+        <article class="square">
+
+            <section class="section">
+                <div class="article">
+                    <h1 id="rules">Rules</h1>
+                    Chess is a two-player board game using a chessboard and sixteen pieces of six types for each player. Each type of piece moves in a distinct way. The object of the game is to checkmate (threaten with inescapable capture) the opponent's king. Games do not necessarily end in checkmate; players often resign if they believe they will lose. A game can also end in a draw in several ways.
+                        <br><br><br>
+                    <img src="img/board.jpg">
+                        <br><br><br>
+
+                    Besides the basic moves of the pieces, rules also govern the equipment used, time control, conduct and ethics of players, accommodations for physically challenged players, and recording of moves using chess notation. Procedures for resolving irregularities that can occur during a game are provided as well.
+                         <br><br><br>
+                         <img src="img/timer.jpg">
+                        <br><br><br>
+                    
+
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="article">
+                    <h1 id="best_players">Best players</h1>
+                    <div class="player">
+                        <figure>
+                            <img src="img/magnus.jpg">
+                            <figcaption>Magnus Carlsen</figcaption>
+                        </figure>
+                    </div>
+                    <div class="player">
+                        <figure>
+                            <img src="img/caruana.jpg">
+                            <figcaption>Fabiano Caruana</figcaption>
+                        </figure>
+                    </div>
+                    <div class="player">
+                        <figure>
+                            <img src="img/liren.jpg">
+                            <figcaption>Ding Liren</figcaption>
+                        </figure> 
+                    </div>
+                    <div class="player">
+                        <figure>
+                            <img src="img/nepomniachtchi.jpg">
+                            <figcaption>Ian Nepomniachtchi</figcaption>
+                        </figure>
+                    </div>
+                    <p></p>
+                    <div class="player">
+                        <figure>
+                            <img src="img/vachier-lagrave.jpg">
+                            <figcaption>Maxime Vachier-Lagrave</figcaption>
+                        </figure> 
+                    </div>
+                    <div class="player">
+                        <figure>
+                            <img src="img/aronian.jpg">
+                            <figcaption>Levon Aronian</figcaption>
+                        </figure> 
+                    </div>
+                    <div class="player">
+                        <figure>
+                            <img src="img/grischuk.jpg">
+                            <figcaption>Alexander Grischuk</figcaption>
+                        </figure>
+                    </div>
+                    <div class="player">
+                        <figure>
+                            <img src="img/so.jpg">
+                            <figcaption>Şhakhriyar Mamedyarov </figcaption>
+                        </figure>
+                    </div>
+                    <p></p>
+                </div>
+            </section>
+
+            <section class="section" >
+                <div class="article">
+                    <h1 id="openings">Openings</h1>
+                    <div class="opening">
+                        <figure>
+                            <img src="img/ruy.webp">
+                           <figcaption>Ruy Lopez</figcaption>
+                       </figure>
+                    </div>
+                    <div class="opening">
+                        <figure>
+                            <img src="img/italian.webp">
+                            <figcaption>Italian Game</figcaption>
+                        </figure>
+                    </div>
+                    <p></p>
+                    <div class="opening">
+                        <figure>
+                            <img src="img/sicilian.webp">
+                            <figcaption>Sicilian Defense</figcaption>
+                        </figure>  
+                    </div>
+                    <div class="opening">
+                     <figure>
+                        <img src="img/french.webp">
+                        <figcaption>French Defense </figcaption>
+                    </figure>  
+                    </div>
+                    <p></p>
+                    
+                    
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="article">
+                    <h1 id="history">History</h1>
+                    The history of chess goes back 2200 years. It was played in Chinese Warring Sates Period about 200BC, called XiangQi. Modern International Chess game though originated in northern India in the 6th century (which shares quite a few common Characteristics with the Chinese creation) AD and spread to Persia. When the Arabs conquered Persia, chess was taken up by the Muslim world and subsequently, through the Moorish conquest of Spain, spread to Southern Europe. But in early Russia, the game came directly from the Khanates (muslim territories) to the south.
+                    <br><br><br>
+                    <img src="img/chess_old.jpg">
+                    <br><br><br>
+                    In Europe, the moves of the pieces changed in the 15th century. The modern game starts with these changes. In the second half of the 19th century, modern tournament play began. Chess clocks were first used in 1883, and the first world chess championship was held in 1886. The 20th century saw advances in chess theory, and the establishment of the World Chess Federation (FIDE). Chess engines (programs that play chess), and chess data bases became important. 
+                </div>
+            </section>
+        </article>
+
+
+    </main>
+
+    <footer class="footer">
+        <div >
+            Szymon Strzelec 2021
+        </div>
+    </footer>
+
+  </body>
+
+</html>
